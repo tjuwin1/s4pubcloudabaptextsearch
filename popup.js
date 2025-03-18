@@ -157,8 +157,6 @@ function getCDSAccess(objname){
 	fetchSourceCode(objname,cdsMain.replace("{{0}}",objname));
 }
 
-function scramble(a){a=a.split("");for(var b=a.length-1;0<b;b--){var c=Math.floor(Math.random()*(b+1));d=a[b];a[b]=a[c];a[c]=d}return a.join("")}
-
 function fetchSourceCode(object,url){
 	let xhr = new XMLHttpRequest();
 	xhr.onreadystatechange = function() {
@@ -167,7 +165,7 @@ function fetchSourceCode(object,url){
 				threadcount--;
 				for(t=0;t<txtsearch.length;t++){
 					if(xhr.responseText.toUpperCase().includes(txtsearch[t].toUpperCase())){
-						outputfield.innerText += "\n" + scramble(object) + " contains word "+ txtsearch[t];
+						outputfield.innerText += "\n" + object + " contains word "+ txtsearch[t];
 					}
 				}
 				getNextSource();
