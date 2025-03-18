@@ -1,0 +1,42 @@
+<html>
+<head>
+<link rel="stylesheet" href="popup.css">
+<title>Search ABAP object contents</title>
+<script src="popup.js"></script>
+</head>
+<body>
+<div id="content" class="preference">
+<label for="opener">Opened by:</label>
+<input name="opener" id="opener" type=text value="Loading..." readonly width="12rem"/>
+</div>
+
+<div id="type" class="preference">
+<label for="types">Object Type:</label>
+<select name="types" id="types">
+  <option value="CLAS" selected>Classes</option>
+  <option value="DDLS">CDS Views</option>
+  <option value="DCLS">CDS Access Controls</option>
+</select>
+</div>
+
+<div id="name" class="preference">
+<label for="names">Object Name Search:</label>
+<textarea id="names" name="names" rows="4" cols="50">
+YY1*
+Z*
+</textarea>
+</div>
+
+<div id="txt" class="preference">
+<label for="txts">Search Texts:</label>
+<textarea id="txts" name="txts" rows="4" cols="50">GBEX
+GB90</textarea>
+</div>
+
+<div id="but" class="preference">
+<button id="searcher" type="button" style="height:2rem;" disabled>Start Search</button>
+</div>
+<div id="msgs" class="preference"></div>
+<div id="output" class="preference"></div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+.preference {
+  display: grid;
+  justify-items: begin;
+  margin: 0.5rem;
+}
